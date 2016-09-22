@@ -7,14 +7,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 <#BS::Del
 
 ; osx style desktop switching
-^Left::^<#Left
-^Right::^<#Right
+;^Left::^<#Left
+;^Right::^<#Right
 
 ; invert touchpad
+#MaxHotkeysPerInterval 300
 WheelUp::
 Send {WheelDown}
 Return
 
+#MaxHotkeysPerInterval 300
 WheelDown::
 Send {WheelUp}
 Return
